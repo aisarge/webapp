@@ -62,3 +62,15 @@ Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/
 ~$ docker --version
 Docker version 27.3.1, build ce12230
 ```
+
+## Step 2: Create webapp directory & required files
+
+```
+:~$ cd /tmp
+:/tmp$ mkdir webapp
+:/tmp$ cd webapp
+:/tmp/webapp$ touch Dockerfile index.html
+:/tmp/webapp$ ls
+Dockerfile  index.html
+
+```
