@@ -145,6 +145,8 @@ CONTAINER ID   IMAGE     COMMAND              CREATED              STATUS       
 eb8360a56d7d   webapp    "httpd-foreground"   About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   beautiful_hermann
 
 ```
+### to verify the output type `http://localhost:8080` in your web browser
+### or from command line run `curl http://127.0.0.1:8080`
 
 ## step 5: Cleanup
 1. stop the running container
