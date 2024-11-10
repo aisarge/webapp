@@ -57,3 +57,8 @@ Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /
 Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/systemd/system/docker.socket.
 
 ```
+### Verify Docker version
+```
+~$ docker --version
+Docker version 27.3.1, build ce12230
+```
