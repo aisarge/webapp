@@ -145,3 +145,28 @@ CONTAINER ID   IMAGE     COMMAND              CREATED              STATUS       
 eb8360a56d7d   webapp    "httpd-foreground"   About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   beautiful_hermann
 
 ```
+
+## step 5: Cleanup
+1. stop the running container
+   ```
+      :/tmp/webapp$ sudo docker stop eb8360a56d7d
+      eb8360a56d7d
+   ```
+2. remove the stopped container
+   ```shell
+   :/tmp/webapp$ sudo docker rm eb8360a56d7d
+eb8360a56d7d
+
+   ```
+3. remove docker image
+```
+:/tmp/webapp$ sudo docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+webapp       latest    190076453907   17 minutes ago   148MB
+:/tmp/webapp$ sudo docker rmi webapp
+Untagged: webapp:latest
+Deleted: sha256:190076453907c0f4080c94c8d45ce0140a6358531504c8eaa6bf40b15f768ac1
+:/tmp/webapp$ sudo docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+```
