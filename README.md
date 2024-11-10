@@ -152,12 +152,13 @@ eb8360a56d7d   webapp    "httpd-foreground"   About a minute ago   Up About a mi
       :/tmp/webapp$ sudo docker stop eb8360a56d7d
       eb8360a56d7d
    ```
+   
 2. remove the stopped container
    ```shell
    :/tmp/webapp$ sudo docker rm eb8360a56d7d
-eb8360a56d7d
-
+   eb8360a56d7d
    ```
+   
 3. remove docker image
 ```shell
 :/tmp/webapp$ sudo docker images
