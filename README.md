@@ -74,3 +74,47 @@ Docker version 27.3.1, build ce12230
 Dockerfile  index.html
 
 ```
+
+## Step 3: Build Docker image
+```shell
+/tmp/webapp$ sudo docker build -t webapp .
+[+] Building 20.1s (7/7) FINISHED                                                                                                                                                                   docker:default
+ => [internal] load build definition from Dockerfile                                                                                                                                                          0.0s
+ => => transferring dockerfile: 96B                                                                                                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/httpd:2.4                                                                                                                                                  2.6s
+ => [internal] load .dockerignore                                                                                                                                                                             0.0s
+ => => transferring context: 2B                                                                                                                                                                               0.0s
+ => [internal] load build context                                                                                                                                                                             0.0s
+ => => transferring context: 272B                                                                                                                                                                             0.0s
+ => [1/2] FROM docker.io/library/httpd:2.4@sha256:bbea29057f25d9543e6a96a8e3cc7c7c937206d20eab2323f478fdb2469d536d                                                                                           17.3s
+ => => resolve docker.io/library/httpd:2.4@sha256:bbea29057f25d9543e6a96a8e3cc7c7c937206d20eab2323f478fdb2469d536d                                                                                            0.0s
+ => => sha256:7fa508eeda1a92870329441e0cdeb372e21b81e1209746dc162867281889edb1 2.10kB / 2.10kB                                                                                                                0.0s
+ => => sha256:3a2663e666707642d4fa962265d11d8ffe70b69fb63759fd2357d966dbebff25 142B / 142B                                                                                                                    1.2s
+ => => sha256:bbea29057f25d9543e6a96a8e3cc7c7c937206d20eab2323f478fdb2469d536d 10.16kB / 10.16kB                                                                                                              0.0s
+ => => sha256:1bcf11fa154f23987201bd92a75bf75e3507fc49f415d5dfe35887d1be3fd596 8.02kB / 8.02kB                                                                                                                0.0s
+ => => sha256:a480a496ba95a197d587aa1d9e0f545ca7dbd40495a4715342228db62b67c4ba 29.13MB / 29.13MB                                                                                                             15.9s
+ => => sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B                                                                                                                      1.2s
+ => => sha256:dbde712f81fb4a8648d9588ee8c8a26659b24763b21d023f2e07e67440adf949 4.20MB / 4.20MB                                                                                                                6.9s
+ => => sha256:867b2ea3628d174d086062614bc2c6e1fbab681834f80f871a5ad99088b925a7 26.04MB / 26.04MB                                                                                                             10.6s
+ => => sha256:6bd9d3710aaec01e07cd1db1d6afa00502d9158f3f368f8f5c8ec6a74f186caf 290B / 290B                                                                                                                    7.3s
+ => => extracting sha256:a480a496ba95a197d587aa1d9e0f545ca7dbd40495a4715342228db62b67c4ba                                                                                                                     0.8s
+ => => extracting sha256:3a2663e666707642d4fa962265d11d8ffe70b69fb63759fd2357d966dbebff25                                                                                                                     0.0s
+ => => extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1                                                                                                                     0.0s
+ => => extracting sha256:dbde712f81fb4a8648d9588ee8c8a26659b24763b21d023f2e07e67440adf949                                                                                                                     0.1s
+ => => extracting sha256:867b2ea3628d174d086062614bc2c6e1fbab681834f80f871a5ad99088b925a7                                                                                                                     0.4s
+ => => extracting sha256:6bd9d3710aaec01e07cd1db1d6afa00502d9158f3f368f8f5c8ec6a74f186caf                                                                                                                     0.0s
+ => [2/2] COPY index.html /usr/local/apache2/htdocs/                                                                                                                                                          0.0s
+ => exporting to image                                                                                                                                                                                        0.0s
+ => => exporting layers                                                                                                                                                                                       0.0s
+ => => writing image sha256:190076453907c0f4080c94c8d45ce0140a6358531504c8eaa6bf40b15f768ac1                                                                                                                  0.0s
+ => => naming to docker.io/library/webapp 
+
+```
+
+### Verify Docker Image 
+
+```shell
+:/tmp/webapp$ sudo docker images
+REPOSITORY   TAG       IMAGE ID       CREATED              SIZE
+webapp       latest    190076453907   About a minute ago   148MB
+```
