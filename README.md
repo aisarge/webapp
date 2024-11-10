@@ -67,14 +67,14 @@ Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/
 
 ```
 ### Verify Docker version
-```
+```shell
 ~$ docker --version
 Docker version 27.3.1, build ce12230
 ```
 
 ## Step 2: Create webapp directory & required files
 
-```
+```shell
 :~$ cd /tmp
 :/tmp$ mkdir webapp
 :/tmp$ cd webapp
@@ -139,7 +139,7 @@ eb8360a56d7d036bc950c4d504e06866f4ae0acb5ef58b7f2073f8faf9082688
 ```
 ### verify the docker container is runnig 
 
-```
+```shell
 sudo docker ps -a
 CONTAINER ID   IMAGE     COMMAND              CREATED              STATUS              PORTS                                     NAMES
 eb8360a56d7d   webapp    "httpd-foreground"   About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   beautiful_hermann
@@ -148,7 +148,7 @@ eb8360a56d7d   webapp    "httpd-foreground"   About a minute ago   Up About a mi
 
 ## step 5: Cleanup
 1. stop the running container
-   ```
+   ```shell
       :/tmp/webapp$ sudo docker stop eb8360a56d7d
       eb8360a56d7d
    ```
@@ -159,7 +159,7 @@ eb8360a56d7d
 
    ```
 3. remove docker image
-```
+```shell
 :/tmp/webapp$ sudo docker images
 REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
 webapp       latest    190076453907   17 minutes ago   148MB
